@@ -1,9 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Start') {
+            steps {
+                bat label: 'Version', script: 'npm -v'
+            }
+        }
+        stage('Installing') {
             steps {
                 bat label: 'Installing npm', script: 'npm install'
+            }
+        }
+        stage('Start Server') {
+            steps {
+                bat label: 'Start Server', script: 'npm start'
             }
         }
     }
