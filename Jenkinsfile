@@ -1,6 +1,10 @@
 pipeline {
     agent any
     stages {
-         sh label: 'INSTALLING', script: 'npm install'
+        stage('build') {
+            steps {
+                sh 'npm --version'
+            }
+        }
     }
 }
