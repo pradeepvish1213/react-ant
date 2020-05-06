@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Start Server') {
             steps {
-                bat label: 'Start Server', script: '\node_modules\.bin\pm2 start'
+                bat label: 'Start Server', script: '\\node_modules\\.bin\\pm2 start'
             }
         }
     }
